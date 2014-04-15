@@ -4,7 +4,6 @@
 
 
 
-
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
@@ -32,6 +31,7 @@
     <gap:plugin name="org.apache.cordova.media-capture" /> 
     
   
+    <access origin="http://127.0.0.1*"/>
    
     <access origin="*" /> 
 
