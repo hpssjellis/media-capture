@@ -2,7 +2,6 @@
 
 
 
-
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
@@ -29,6 +28,7 @@
     <gap:plugin name="org.apache.cordova.file" /> 
     <gap:plugin name="org.apache.cordova.media" /> 
     <gap:plugin name="org.apache.cordova.media-capture" /> 
+    <gap:plugin name="com.rjfun.cordova.plugin.lowlatencyaudio" version="1.0" />
     
   
     <access origin="http://127.0.0.1*"/>
