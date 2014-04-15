@@ -1,1 +1,48 @@
-asdfg
+        <script type="text/javascript" charset="utf-8" src="PGLowLatencyAudio.js"></script>
+
+
+
+
+
+
+<input type=button value="play" style="font-size:35px;" onclick="{
+
+
+    var my_media = new Media('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3',
+        // success callback
+        function () {
+            alert('playAudio():Audio Success');
+        },
+      // error callback
+        function (err) {
+            alert('playAudio():Audio Error: ' + err);
+        }
+    );
+    // Play audio
+   // my_media.play();
+
+
+
+  // document.getElementById('my_media').pause()
+   document.getElementById('my_media').play()
+}">
+
+
+
+
+
+<input type=button value="pause" style="font-size:35px;" onclick="{
+
+   document.getElementById('my_media').pause()
+}">
+
+
+<font style="font-size:35px;>
+
+
+            <li><a href="javascript:PGLowLatencyAudio.preloadAudio('cymbal', 'Kalimba.mp3', 3, successHandler, errorHandler);">preload cymbal</a></li>
+            <li><a href="javascript:PGLowLatencyAudio.preloadFX('drum', 'Kalimba.mp3', successHandler, errorHandler);">preload drum</a></li>
+            <li><a href="javascript:PGLowLatencyAudio.play('cymbal', successHandler, errorHandler);">play cymbal</a></li>
+            <li><a href="javascript:PGLowLatencyAudio.play('drum', successHandler, errorHandler);">play drum</a></li>
+            
+</font>
