@@ -4,6 +4,65 @@
 
 
 
+		<title>Media</title>
+		<link rel="stylesheet" href="estilo.css" type="text/css">
+		<script type="text/javascript" charset="utf-8">
+
+			document.addEventListener("deviceready", onDeviceReady, false);
+
+			function onDeviceReady(){
+				playAudio("http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3");
+			}
+
+			var my_media = null;
+
+			function playAudio(src){
+				my_media = new Media(src, onSuccess, onError);
+
+				my_media.play();
+			}
+
+			function pauseAudio(){
+				if(my_media){
+					my_media.pause();
+				}
+			}
+
+			function stopAudio(){
+				if(my_media){
+					my_media.pause();
+				}			
+			}
+
+			function onSuccess(){
+				console.log("playAudio(): Audio correcto");
+			}
+
+			function onError(error){
+				alert('código: '  + error.code    + '\n' + 
+                  'mensaje: ' + error.message + '\n');
+
+			}
+		</script>
+
+	<body>
+		<div id="modificar1">
+			<a href="#" class="btn_large" onclick="playAudio('http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3');">Play Audio</a><p>
+		</div>
+		<div id="modificar2">
+			<a href="#" class="btn_large" onclick="pauseAudio();">Pause Playing Audio</a><p>
+		</div>
+		<div id="modificar3">
+			<a href="#" class="btn_large" onclick="stopAudio();">Stop Playing Audio</a><p>
+		</div>
+
+
+
+
+
+
+
+
 
 <input type=button value="play" style="font-size:35px;" onclick="{
 
